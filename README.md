@@ -5,12 +5,12 @@ built as a single-page vanilla-JS app — no build step required.
 
 ## Run it locally
 
-Just open `index.html` in a browser, or serve the folder statically:
+Just open `public/index.html` in a browser, or serve the folder statically:
 
 ```bash
-npx serve .
+npx serve public
 # or
-python3 -m http.server 8000
+python3 -m http.server 8000 --directory public
 ```
 
 `app.js` must be served alongside `index.html` (not opened via `file://` in some browsers,
@@ -35,8 +35,8 @@ to components (Dashboard, Today, Timetable, History, Analytics, Settings).
 
 ## Structure
 
-- `index.html` — page shell, design tokens, all CSS.
-- `app.js` — everything else: data model, storage, checklist generation, timers, all views,
+- `public/index.html` — page shell, design tokens, all CSS.
+- `public/app.js` — everything else: data model, storage, checklist generation, timers, all views,
   event delegation. Organized into numbered sections (see comments at the top of each section).
 
 ## Backup
